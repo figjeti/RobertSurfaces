@@ -1,0 +1,90 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- Sealcoating -->
+<section class="section service-detail">
+  <div class="container">
+    <div class="service-split">
+      <div class="service-split-img">
+        <img src="/images/sealcoat-fresh.jpg" alt="Fresh sealcoat application">
+      </div>
+      <div class="service-split-text">
+        <span class="service-label">01</span>
+        <h2>Sealcoating</h2>
+        <p>Sealcoating is the best way to protect your asphalt investment. It shields against UV damage, water penetration, and chemical spills while giving your surface a clean, dark finish that looks brand new.</p>
+        <ul class="service-list">
+          <li>Extends pavement life by up to 30%</li>
+          <li>Protects against oxidation, rain, and freeze-thaw damage</li>
+          <li>Improves curb appeal instantly</li>
+          <li>Recommended every 2-3 years for best results</li>
+          <li>Residential driveways and commercial parking lots</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Get a Sealcoating Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Asphalt Paving -->
+<section class="section service-detail alt">
+  <div class="container">
+    <div class="service-split reverse">
+      <div class="service-split-img">
+        <img src="/images/roller-action.jpg" alt="Roller compacting fresh asphalt">
+      </div>
+      <div class="service-split-text">
+        <span class="service-label">02</span>
+        <h2>Asphalt Paving</h2>
+        <p>Whether you need a brand-new driveway or a full commercial parking lot, we handle it from start to finish. Our team uses quality materials and proven techniques to deliver surfaces that look great and hold up to years of heavy use.</p>
+        <ul class="service-list">
+          <li>Residential driveways and walkways</li>
+          <li>Commercial parking lots</li>
+          <li>Private roads and access roads</li>
+          <li>Patching, repair, and resurfacing</li>
+          <li>Proper base preparation and grading included</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Get a Paving Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Concrete Work -->
+<section class="section service-detail">
+  <div class="container">
+    <div class="service-split">
+      <div class="service-split-img">
+        <img src="/images/concrete-pour.jpg" alt="Concrete being poured on site">
+      </div>
+      <div class="service-split-text">
+        <span class="service-label">03</span>
+        <h2>Concrete Work</h2>
+        <p>From sidewalks to foundations, we pour and finish concrete that stands the test of time. Clean edges, smooth finishes, and built to code.</p>
+        <ul class="service-list">
+          <li>Driveways and sidewalks</li>
+          <li>Patios and pool decks</li>
+          <li>Foundations and slabs</li>
+          <li>Curbing and gutters</li>
+          <li>Flatwork of all kinds</li>
+        </ul>
+        <a href="/contact/" class="btn btn-primary">Get a Concrete Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="container cta-content">
+    <h2>Not Sure What You Need?</h2>
+    <p>Give us a call and we'll come take a look. We'll tell you exactly what needs to be done and give you a straight, honest quote.</p>
+    <a href="tel:{{ .Site.Params.phone }}" class="btn btn-primary btn-lg">Call {{ .Site.Params.phone }}</a>
+  </div>
+</section>
+
+{{ end }}

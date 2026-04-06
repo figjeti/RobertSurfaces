@@ -1,0 +1,48 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>Ready to get started on your paving project? Give us a call or fill out the form and we'll get back to you within 24 hours with a free estimate.</p>
+
+        <h3>Phone</h3>
+        <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+
+        <h3>Email</h3>
+        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+
+        <h3>Service Area</h3>
+        <p>{{ .Site.Params.address }}</p>
+
+        <h3>Hours</h3>
+        <p>Monday – Friday: 7:00 AM – 6:00 PM</p>
+        <p>Saturday: 8:00 AM – 2:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+      <form class="contact-form" name="contact" method="POST" data-netlify="true">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <select name="service">
+          <option value="" disabled selected>Type of Service Needed</option>
+          <option value="sealcoating">Sealcoating</option>
+          <option value="asphalt">Asphalt Paving</option>
+          <option value="concrete">Concrete Work</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Tell us about your project..." rows="5"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+{{ end }}

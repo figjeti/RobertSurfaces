@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <span class="footer-logo">Roadrunner<strong>Surfaces</strong></span>
+      <p>{{ .Site.Params.description }}</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+      <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      <p>{{ .Site.Params.address }}</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {{ now.Year }} Roadrunner Surfaces. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
